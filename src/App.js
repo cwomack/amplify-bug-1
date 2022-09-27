@@ -47,7 +47,7 @@ const App = ({ signOut }) => {
     const data = {
       name: form.get("name"),
       description: form.get("description"),
-      image: await image.name,
+      image: image?.name,
     };
     if (!!data.image) await Storage.put(data.name, image);
     await API.graphql({
